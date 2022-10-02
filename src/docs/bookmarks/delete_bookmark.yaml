@@ -1,0 +1,18 @@
+Delete a Bookmark by id
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: path
+    name: bookmark_id
+    required: true
+responses:
+  204:
+    description: Bookmark has been deleted
+  401:
+    description: Fails to get items due to authentication error
+  404:
+    description: Bookmark not found

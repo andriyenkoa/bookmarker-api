@@ -1,0 +1,19 @@
+Get a Bookmark by id
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: path
+    name: bookmark_id
+    required: true
+
+responses:
+  200:
+    description: Get a Bookmark
+  401:
+    description: Fails to get items due to authentication error
+  404:
+    description: Bookmark not found

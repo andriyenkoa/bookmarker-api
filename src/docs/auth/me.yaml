@@ -1,0 +1,15 @@
+Get current User information
+---
+tags:
+  - Authentication
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: User information
+
+  401:
+    description: Fails to get items due to authentication error

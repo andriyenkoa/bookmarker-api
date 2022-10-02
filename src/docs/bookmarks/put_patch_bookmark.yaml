@@ -1,0 +1,36 @@
+Change a Bookmark by id
+---
+tags:
+  - Bookmarks
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+  - in: path
+    name: bookmark_id
+    required: true
+  - in: body
+    name: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "url"
+        - "body"
+      properties:
+        url:
+          type: "string"
+          example: "https://google.com"
+        body:
+          type: "string"
+          example: "Google Site"
+responses:
+  200:
+    description: Bookmark has been updated
+  400:
+    description: URL is not valid
+  401:
+    description: Fails to get items due to authentication error
+  404:
+    description: Bookmark not found
+
