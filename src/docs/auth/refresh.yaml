@@ -1,0 +1,15 @@
+Update an access token
+---
+tags:
+  - Authentication
+parameters:
+  - in: header
+    name: Authorization
+    required: true
+
+responses:
+  200:
+    description: Token has been updated
+
+  401:
+    description: Fails to get items due to authentication error
